@@ -8,11 +8,9 @@
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
-- [File Structure](#file-structure)
 - [API Endpoints](#api-endpoints)
 - [Frontend Components](#frontend-components)
-- [Contribution](#contribution)
-- [License](#license)
+
 
 ## Introduction
 
