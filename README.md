@@ -86,6 +86,10 @@ This is a full-stack Task Management Application that allows users to register, 
     CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
     CLOUDINARY_API_KEY=your_cloudinary_api_key
     CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+    JWT_EXPIRES
+    COOKIE_EXPIRE
+    FRONTEND_URL
+PORT
     ```
 
 ### Frontend Setup
@@ -112,7 +116,7 @@ This is a full-stack Task Management Application that allows users to register, 
     npm run dev
     ```
 
-    The backend server will start at `http://localhost:5000`.
+    The backend server will start at `http://localhost:4000`.
 
 ### Running the Frontend
 
@@ -122,56 +126,9 @@ This is a full-stack Task Management Application that allows users to register, 
     npm run dev
     ```
 
-    The frontend application will start at `http://localhost:3000`.
-
-## File Structure
-
-### Backend
-
-backend/
-│
-├── controllers/
-│ └── authController.js
-│ └── taskController.js
-│
-├── models/
-│ └── User.js
-│ └── Task.js
-│
-├── routes/
-│ └── authRoutes.js
-│ └── taskRoutes.js
-│
-├── utils/
-│ └── jwtHelper.js
-│
-├── .env
-├── server.js
-└── package.json
+    The frontend application will start at `http://localhost:5176`.
 
 
-### Frontend
-
-
-frontend/
-│
-├── public/
-│ └── index.html
-│
-├── src/
-│ ├── components/
-│ │ ├── Navbar.js
-│ │ ├── Home.js
-│ │ ├── Register.js
-│ │ ├── Login.js
-│ │ ├── Profile.js
-│ │
-│ ├── assets/
-│ │ └── logo.png
-│ │
-│ ├── App.js
-│ ├── index.js
-│ └── package.json
 
 
 ## API Endpoints
@@ -186,9 +143,11 @@ frontend/
 ### Task Routes
 
 - `GET /api/v1/task/mytask` - Get user tasks
-- `POST /api/v1/task/new` - Create a new task
+- `POST /api/v1/task/post` - Create a new task
 - `PATCH /api/v1/task/update/:id` - Update a task
 - `DELETE /api/v1/task/delete/:id` - Delete a task
+- `DELETE /api/v1/task/single/:id` - Get a Single task
+  
 
 ## Frontend Components
 
@@ -199,11 +158,4 @@ frontend/
 - **Login**: Login form for existing users.
 - **Profile**: Displays the user's profile and allows updates.
 
-## Contribution
-
-Contributions are welcome! If you have any suggestions or improvements, feel free to submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
